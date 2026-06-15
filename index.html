@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusPlay — Next-Gen Gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">NEXUS<span class="logo-accent">PLAY</span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#games" class="nav-link">Games</a></li>
+      <li><a href="#trailer" class="nav-link">Trailer</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost">Sign In</button>
+      <button class="btn-primary">Play Now</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glitch-lines"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Season 5 — Now Live</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line" data-text="ENTER THE">ENTER THE</span>
+        <span class="title-line glitch-text" data-text="NEXUS">NEXUS</span>
+        <span class="title-line sub">UNIVERSE</span>
+      </h1>
+      <p class="hero-desc">
+        Dominate infinite worlds. Forge your legend in the most immersive next-gen gaming experience ever created.
+      </p>
+      <div class="hero-cta">
+        <button class="btn-neon" id="playBtn">
+          <span class="btn-icon">▶</span> Start Playing
+        </button>
+        <button class="btn-outline">
+          Watch Trailer
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="48">0</span><span>M+</span>
+          <span class="stat-label">Players</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="200">0</span><span>+</span>
+          <span class="stat-label">Games</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="99">0</span><span>%</span>
+          <span class="stat-label">Uptime</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="controller-wrapper">
+        <div class="controller-glow"></div>
+        <div class="controller-ring ring-1"></div>
+        <div class="controller-ring ring-2"></div>
+        <div class="controller-ring ring-3"></div>
+        <div class="controller-core">🎮</div>
+      </div>
+      <div class="floating-badges">
+        <div class="float-badge fb-1">🏆 #1 Ranked</div>
+        <div class="float-badge fb-2">⚡ 4K Ultra</div>
+        <div class="float-badge fb-3">🌐 Cross-Platform</div>
+        <div class="float-badge fb-4">🔥 Hot Now</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ===== GAME SLIDER ===== -->
+  <section class="games-section" id="games">
+    <div class="section-header">
+      <div class="section-tag">Featured Games</div>
+      <h2 class="section-title">CHOOSE <span class="accent">YOUR BATTLE</span></h2>
+      <p class="section-desc">Handpicked titles across every genre. Your next obsession awaits.</p>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="game-card" data-genre="FPS">
+          <div class="card-bg" style="--card-color: #ff4d00;"></div>
+          <div class="card-glow" style="--glow: #ff4d00;"></div>
+          <div class="card-tag">FPS</div>
+          <div class="card-emoji">🔫</div>
+          <div class="card-rating">⭐ 9.8</div>
+          <h3 class="card-title">SHADOW STRIKE</h3>
+          <p class="card-genre">First Person Shooter</p>
+          <div class="card-meta">
+            <span>👥 2.1M Online</span>
+            <span>🔥 Trending</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+        <div class="game-card active" data-genre="RPG">
+          <div class="card-bg" style="--card-color: #7c3aed;"></div>
+          <div class="card-glow" style="--glow: #7c3aed;"></div>
+          <div class="card-tag">RPG</div>
+          <div class="card-emoji">⚔️</div>
+          <div class="card-rating">⭐ 9.6</div>
+          <h3 class="card-title">DRAGON REALM</h3>
+          <p class="card-genre">Role Playing Game</p>
+          <div class="card-meta">
+            <span>👥 5.4M Online</span>
+            <span>🏆 Editor's Pick</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+        <div class="game-card" data-genre="RACING">
+          <div class="card-bg" style="--card-color: #00c9ff;"></div>
+          <div class="card-glow" style="--glow: #00c9ff;"></div>
+          <div class="card-tag">RACING</div>
+          <div class="card-emoji">🏎️</div>
+          <div class="card-rating">⭐ 9.4</div>
+          <h3 class="card-title">TURBO BLAZE</h3>
+          <p class="card-genre">Street Racing</p>
+          <div class="card-meta">
+            <span>👥 1.8M Online</span>
+            <span>⚡ New Season</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+        <div class="game-card" data-genre="BATTLE">
+          <div class="card-bg" style="--card-color: #00ff88;"></div>
+          <div class="card-glow" style="--glow: #00ff88;"></div>
+          <div class="card-tag">BATTLE</div>
+          <div class="card-emoji">🛡️</div>
+          <div class="card-rating">⭐ 9.2</div>
+          <h3 class="card-title">IRON FORTRESS</h3>
+          <p class="card-genre">Battle Royale</p>
+          <div class="card-meta">
+            <span>👥 3.2M Online</span>
+            <span>🎯 Competitive</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+        <div class="game-card" data-genre="SCI-FI">
+          <div class="card-bg" style="--card-color: #ff006e;"></div>
+          <div class="card-glow" style="--glow: #ff006e;"></div>
+          <div class="card-tag">SCI-FI</div>
+          <div class="card-emoji">🚀</div>
+          <div class="card-rating">⭐ 9.5</div>
+          <h3 class="card-title">VOID SECTOR</h3>
+          <p class="card-genre">Space Adventure</p>
+          <div class="card-meta">
+            <span>👥 4.1M Online</span>
+            <span>🌟 Top Rated</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+        <div class="game-card" data-genre="SURVIVAL">
+          <div class="card-bg" style="--card-color: #f59e0b;"></div>
+          <div class="card-glow" style="--glow: #f59e0b;"></div>
+          <div class="card-tag">SURVIVAL</div>
+          <div class="card-emoji">🌲</div>
+          <div class="card-rating">⭐ 9.0</div>
+          <h3 class="card-title">DARK WILDS</h3>
+          <p class="card-genre">Survival Horror</p>
+          <div class="card-meta">
+            <span>👥 1.5M Online</span>
+            <span>💀 Hardcore</span>
+          </div>
+          <button class="card-btn">Play Now →</button>
+        </div>
+
+      </div>
+
+      <button class="slider-btn prev" id="sliderPrev">&#8249;</button>
+      <button class="slider-btn next" id="sliderNext">&#8250;</button>
+
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO TRAILER ===== -->
+  <section class="trailer-section" id="trailer">
+    <div class="trailer-bg"></div>
+    <div class="section-header">
+      <div class="section-tag">Official Trailer</div>
+      <h2 class="section-title">WATCH THE <span class="accent">ACTION</span></h2>
+    </div>
+
+    <div class="video-wrapper">
+      <div class="video-frame">
+        <video
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80"
+        >
+          <!-- Royalty-free gaming demo video from mixkit -->
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-gaming-setup-with-neon-lights-32192-large.mp4" type="video/mp4"/>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+        </video>
+
+        <div class="video-overlay" id="videoOverlay">
+          <button class="play-btn-big" id="videoPlayBtn">
+            <span>▶</span>
+          </button>
+          <div class="video-scanlines"></div>
+        </div>
+
+        <div class="video-controls-bar" id="videoControlsBar">
+          <button class="vc-btn" id="vcPlayPause">⏸</button>
+          <div class="vc-progress-wrap">
+            <div class="vc-progress-bg">
+              <div class="vc-progress-fill" id="vcProgressFill"></div>
+            </div>
+          </div>
+          <button class="vc-btn" id="vcMute">🔇</button>
+          <button class="vc-btn" id="vcFullscreen">⛶</button>
+        </div>
+      </div>
+
+      <div class="video-info">
+        <div class="vi-badge">NEW</div>
+        <h3>Season 5: Shadows of the Nexus</h3>
+        <p>Experience the most epic cinematic trailer ever released. New realms, new powers, and unstoppable enemies await in the most anticipated season yet.</p>
+        <div class="vi-tags">
+          <span>#NexusPlay</span>
+          <span>#Season5</span>
+          <span>#GamingLive</span>
+        </div>
+        <button class="btn-neon small">Watch Full Trailer →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <div class="section-tag">Platform Features</div>
+      <h2 class="section-title">BUILT FOR <span class="accent">LEGENDS</span></h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fc-large">
+        <div class="fc-icon">⚡</div>
+        <h3>Ultra-Low Latency</h3>
+        <p>Sub-10ms ping across our global server network. Every millisecond matters in combat.</p>
+        <div class="fc-bar"><div class="fc-fill" style="width: 97%"></div></div>
+        <span class="fc-pct">97ms avg</span>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🎯</div>
+        <h3>Smart Matchmaking</h3>
+        <p>AI-powered skill-based matching for perfectly balanced battles every time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🌐</div>
+        <h3>Cross-Platform</h3>
+        <p>Play seamlessly across PC, Console, and Mobile with unified progression.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔒</div>
+        <h3>Anti-Cheat Shield</h3>
+        <p>Military-grade detection system keeps every match fair and competitive.</p>
+      </div>
+      <div class="feature-card fc-medium">
+        <div class="fc-icon">🏆</div>
+        <h3>Live Tournaments</h3>
+        <p>Compete in weekly and monthly tournaments with real prize pools. From amateur to pro.</p>
+        <div class="fc-prize">💰 $500K Prize Pool</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🎨</div>
+        <h3>Deep Customization</h3>
+        <p>Thousands of skins, emotes, and effects to make your character uniquely yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERBOARD ===== -->
+  <section class="leaderboard-section" id="leaderboard">
+    <div class="section-header">
+      <div class="section-tag">Global Rankings</div>
+      <h2 class="section-title">TOP <span class="accent">PLAYERS</span></h2>
+    </div>
+
+    <div class="lb-container">
+      <div class="lb-filters">
+        <button class="lb-filter active" data-filter="global">Global</button>
+        <button class="lb-filter" data-filter="weekly">Weekly</button>
+        <button class="lb-filter" data-filter="monthly">Monthly</button>
+      </div>
+
+      <div class="lb-table" id="lbTable">
+        <div class="lb-row lb-header">
+          <span>Rank</span>
+          <span>Player</span>
+          <span>Game</span>
+          <span>Wins</span>
+          <span>Score</span>
+        </div>
+        <!-- JS will populate -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-content">
+      <div class="cta-pulse"></div>
+      <h2>READY TO DOMINATE?</h2>
+      <p>Join 48 million players already in the arena. Your legend starts today.</p>
+      <button class="btn-neon large" id="ctaBtn">
+        <span>⬡</span> CREATE FREE ACCOUNT
+      </button>
+      <div class="cta-note">No credit card required · Instant access · All platforms</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">NEXUS<span class="logo-accent">PLAY</span></span>
+        </div>
+        <p>The ultimate next-gen gaming platform built for the future of play.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">𝕏</a>
+          <a href="#" class="social-icon">🎮</a>
+          <a href="#" class="social-icon">📺</a>
+          <a href="#" class="social-icon">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Games</h4>
+        <ul>
+          <li><a href="#">New Releases</a></li>
+          <li><a href="#">Top Charts</a></li>
+          <li><a href="#">Free to Play</a></li>
+          <li><a href="#">Tournaments</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">System Req.</a></li>
+          <li><a href="#">Updates</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Clans</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NexusPlay. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
